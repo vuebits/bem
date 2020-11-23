@@ -37,6 +37,9 @@
     "src",
     "tsconfig.json"
   ],
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "typescript": "^4.1.2",
     "vue": "^3.0.2"
