@@ -16,7 +16,7 @@ interface BemItem {
   m?: string | string[] | {[key in string]: boolean};
 }
 
-function getClassName (b: string, e?: string, m?: string) {
+function getClassName (b: string, e?: string, m?: string): string {
   return `${b}${e ? `__${e}` : ''}${m ? `--${m}` : ''}`;
 }
 
@@ -37,7 +37,7 @@ function install (Vue: App, { hyphenate }: BemOptions): void {
   });
 }
 
-export function createBem (options: BemOptions) {
+export function createBem (options: BemOptions): {install: (T: App) => void} {
   return {
     install: (app: App) => install(app, options)
   };
