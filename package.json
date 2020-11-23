@@ -1,0 +1,40 @@
+{
+  "name": "vue-bem",
+  "version": "0.1.0",
+  "description": "Vue plugin for BEM parameterization",
+  "main": "dist/index.js",
+  "author": {
+    "name": "vuebites",
+    "url": "https://github.com/vuebites"
+  },
+  "contributors": [
+    {
+      "name": "Szczepan Masny",
+      "email": "szczepanmasny@gmai.com",
+      "url": "https://github.com/szczepanmasny"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vuebites/vue-bem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vuebites/vue-bem"
+  },
+  "bugs": {
+    "url": "https://github.com/vuebites/vue-bem/issues"
+  },
+  "keywords": [
+    "bem",
+    "vue",
+    "vuejs",
+    "vue3",
+    "vue bem",
+    "vuejs bem",
+    "vue3 bem"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "tsconfig.json"
+  ]
+}
