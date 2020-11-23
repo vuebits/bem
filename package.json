@@ -36,5 +36,8 @@
     "dist",
     "src",
     "tsconfig.json"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
 }
