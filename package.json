@@ -1,5 +1,5 @@
 {
-  "name": "@vuebites/vue-bem",
+  "name": "@vuebites/bem",
   "version": "0.1.0",
   "description": "Vue plugin for BEM parameterization",
   "main": "dist/index.js",
@@ -8,13 +8,13 @@
     "Szczepan Masny <szczepanmasny@gmail.com> (https://github.com/szczepanmasny)"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/vuebites/vue-bem",
+  "homepage": "https://github.com/vuebites/bem",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuebites/vue-bem.git"
+    "url": "git+https://github.com/vuebites/bem.git"
   },
   "bugs": {
-    "url": "https://github.com/vuebites/vue-bem/issues"
+    "url": "https://github.com/vuebites/bem/issues"
   },
   "keywords": [
     "bem",
