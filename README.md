@@ -9,6 +9,23 @@
   </a>
 </p>
 
-<h4 align="center">Simple implementation of BEM in Vue 3</h4>
+<h4 align="center">Simple implementation of [BEM](http://getbem.com/) in Vue 3.x</h4>
+<p>Based on Vue 2.x library [vue-bem-cn](https://github.com/c01nd01r/vue-bem-cn)</p>
 
 ---
+
+## Table of Contents
+
+* [Installation](#installation)
+
+## Installation
+
+`npm i @vuebits/bem` / `yarn add @vuebits/bem`
+
+And install in your entry file (e.g. `main.js`):
+
+```javascript
+import { createBem } from '@vuebits/bem';
+
+createApp(App).use(createBem({ /* your config here */ })).mount('#app');
+```
