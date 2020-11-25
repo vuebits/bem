@@ -145,3 +145,39 @@ export default defineComponent({
 </style>
 
 ```
+
+### Element name:
+
+```vue
+<template>
+  <div :class="$bem({})"> <!-- (or $bem({b: 'hello-world'})) - return 'hello-world' -->
+    <h1 :class="$bem({e: 'title'})"> <!-- (or $bem({b: 'hello-world', e: 'title'})) - return 'hello-world__title' -->
+      Hello world!
+    </h1>
+    <p :class="$bem({e: 'description'})"> <!-- (or $bem({b: 'hello-world', e: 'description'})) - return 'hello-world__description' -->
+      This is a description
+    </p>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HelloWorld'
+});
+</script>
+
+<style lang="scss">
+.hello-world {
+  // some styles here
+  &__title {
+    // some styles here
+  }
+  &__description {
+    // some styles here
+  }
+}
+</style>
+
+```
