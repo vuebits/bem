@@ -100,7 +100,7 @@ and then:
 
 ```vue
 <template>
-  <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world' -->
+  <div :class="$bem({})"> <!-- returns ['hello-world'] -->
     Hello world!
   </div>
 </template>
@@ -125,7 +125,7 @@ export default defineComponent({
 
 ```vue
 <template>
-  <div :class="$bem({b: 'custom-block'})"> <!-- $bem({b: 'custom-block'}) will return 'custom-block' -->
+  <div :class="$bem({b: 'custom-block'})"> <!-- returns ['custom-block'] -->
     Hello world!
   </div>
 </template>
@@ -150,11 +150,11 @@ export default defineComponent({
 
 ```vue
 <template>
-  <div :class="$bem({})"> <!-- (or $bem({b: 'hello-world'})) - return 'hello-world' -->
-    <h1 :class="$bem({e: 'title'})"> <!-- (or $bem({b: 'hello-world', e: 'title'})) - return 'hello-world__title' -->
+  <div :class="$bem({})"> <!-- (or $bem({b: 'hello-world'})) - return ['hello-world'] -->
+    <h1 :class="$bem({e: 'title'})"> <!-- (or $bem({b: 'hello-world', e: 'title'})) - returns ['hello-world__title'] -->
       Hello world!
     </h1>
-    <p :class="$bem({e: 'description'})"> <!-- (or $bem({b: 'hello-world', e: 'description'})) - return 'hello-world__description' -->
+    <p :class="$bem({e: 'description'})"> <!-- (or $bem({b: 'hello-world', e: 'description'})) - returns ['hello-world__description'] -->
       This is a description
     </p>
   </div>
@@ -176,6 +176,48 @@ export default defineComponent({
   }
   &__description {
     // some styles here
+  }
+}
+</style>
+
+```
+
+### Inline modfiers:
+
+```vue
+<template>
+  <div :class="$bem({})"> <!-- returns ['hello-world'] -->
+    <p :class="$bem({e: 'text, m: ['underlined'})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined'] -->
+      This is a description
+    </p>
+    <p :class="$bem({e: 'text, m: ['underlined', 'highlighted']'})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined', 'hello-world__text--highlighted'] -->
+      This is a description
+    </p>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HelloWorld'
+});
+</script>
+
+<style lang="scss">
+.hello-world {
+  // some styles here
+  &__title {
+    // some styles here
+  }
+  &__text {
+    // some styles here
+    &--underlined {
+      // some styles here
+    }
+    &--highlighted {
+      // some styles here
+    }
   }
 }
 </style>
