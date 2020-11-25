@@ -17,6 +17,9 @@
 ## Table of Contents
 
 * [Installation](#installation)
+* [API](#api)
+* [Documentation](#documentation)
+
 
 ## Installation
 
@@ -28,4 +31,61 @@ And install in your entry file (e.g. `main.js`):
 import { createBem } from '@vuebits/bem';
 
 createApp(App).use(createBem({ /* your config here */ })).mount('#app');
+```
+
+## API
+
+### Available functions:
+
+* `createBem (options: BemOptions)`:
+
+```ts
+interface BemOptions {
+  hyphenate?: boolean;
+}
+```
+
+### Vue instance properties and methods:
+
+* `$bem ({ b, e, m }: BemItem): string[]`:
+
+```ts
+interface BemItem {
+  b?: string;
+  e?: string;
+  m?: string | string[] | {[key in string]: boolean};
+}
+```
+
+## Examples
+
+### Using component name by default:
+
+```vue
+<template>
+  <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world'
+    {{ msg }}
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+
+export default defineComponent({
+  name: 'hello-world',
+  props: {
+    msg: {
+      type: String as PropType<string>,
+      default: ''
+    }
+  }
+});
+</script>
+
+<style lang="scss">
+.hello-world {
+  // some styles here
+}
+</style>
+
 ```
