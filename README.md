@@ -190,7 +190,7 @@ export default defineComponent({
     <p :class="$bem({e: 'text', m: ['underlined']})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined'] -->
       This is a description
     </p>
-    <p :class="$bem({e: 'text', m: ['underlined', 'highlighted']'})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined', 'hello-world__text--highlighted'] -->
+    <p :class="$bem({e: 'text', m: ['underlined', 'highlighted']})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined', 'hello-world__text--highlighted'] -->
       This is a description
     </p>
   </div>
