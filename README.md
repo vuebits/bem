@@ -64,26 +64,82 @@ interface BemItem {
 ```vue
 <template>
   <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world' -->
-    {{ msg }}
+    Hello world!
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'hello-world',
-  props: {
-    msg: {
-      type: String as PropType<string>,
-      default: ''
-    }
-  }
+  name: 'hello-world'
 });
 </script>
 
 <style lang="scss">
 .hello-world {
+  // some styles here
+}
+</style>
+
+```
+
+### Using hyphenated component name:
+
+If you use PascalCase naming convence you should init library with `hyphenate` option:
+
+```js
+import { createBem } from '@vuebits/bem';
+
+createApp(App).use(createBem({
+  hyphenate: true
+})).mount('#app');
+```
+
+and then:
+
+```vue
+<template>
+  <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world' -->
+    Hello world!
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HelloWorld'
+});
+</script>
+
+<style lang="scss">
+.hello-world {
+  // some styles here
+}
+</style>
+
+```
+
+### Custom block name:
+
+```vue
+<template>
+  <div :class="$bem({b: 'custom-block'})"> <!-- $bem({b: 'custom-block'}) will return 'custom-block' -->
+    Hello world!
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HelloWorld'
+});
+</script>
+
+<style lang="scss">
+.custom-block {
   // some styles here
 }
 </style>
