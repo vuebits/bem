@@ -9,8 +9,8 @@
   </a>
 </p>
 
-<h4 align="center">Simple implementation of [BEM](http://getbem.com/) in Vue 3.x</h4>
-<p>Based on Vue 2.x library [vue-bem-cn](https://github.com/c01nd01r/vue-bem-cn)</p>
+<h4 align="center">Simple implementation of <a href="http://getbem.com/">BEM</a> in Vue 3.x</h4>
+<p>Based on Vue 2.x library <a href="https://github.com/c01nd01r/vue-bem-cn">vue-bem-cn</a></p>
 
 ---
 
