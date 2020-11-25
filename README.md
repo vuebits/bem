@@ -63,7 +63,7 @@ interface BemItem {
 
 ```vue
 <template>
-  <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world'
+  <div :class="$bem({})"> <!-- $bem({}) will return 'hello-world' -->
     {{ msg }}
   </div>
 </template>
