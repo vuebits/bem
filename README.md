@@ -187,7 +187,7 @@ export default defineComponent({
 ```vue
 <template>
   <div :class="$bem({})"> <!-- returns ['hello-world'] -->
-    <p :class="$bem({e: 'text, m: ['underlined'})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined'] -->
+    <p :class="$bem({e: 'text, m: ['underlined']})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined'] -->
       This is a description
     </p>
     <p :class="$bem({e: 'text, m: ['underlined', 'highlighted']'})"> <!-- returns ['hello-world__text', 'hello-world__text--underlined', 'hello-world__text--highlighted'] -->
