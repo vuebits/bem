@@ -207,10 +207,48 @@ export default defineComponent({
 <style lang="scss">
 .hello-world {
   // some styles here
-  &__title {
-    // some styles here
-  }
   &__text {
+    // some styles here
+    &--underlined {
+      // some styles here
+    }
+    &--highlighted {
+      // some styles here
+    }
+  }
+}
+</style>
+
+```
+
+### Conditional modfiers:
+
+```vue
+<template>
+  <div :class="$bem({})"> <!-- returns ['hello-world'] -->
+    <p :class="$bem({e: 'description', m: {underlined: true, highlighted: isHighlighted}})"> <!-- returns ['hello-world__description', 'hello-world__description--underlined'] -->
+      This is a description
+    </p>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'HelloWorld',
+  data () {
+    return {
+      isHighlighted: false
+    };
+  }
+});
+</script>
+
+<style lang="scss">
+.hello-world {
+  // some styles here
+  &__description {
     // some styles here
     &--underlined {
       // some styles here
