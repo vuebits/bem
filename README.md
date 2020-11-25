@@ -1,4 +1,4 @@
-<h1 align="center">Vue BEM</h1>
+<h1 align="center">Vue 3 BEM</h1>
 
 <h4 align="center">*** Maintainers & Contributors welcome ***</h4>
 
