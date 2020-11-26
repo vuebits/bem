@@ -1,6 +1,6 @@
 {
   "name": "@vuebits/bem",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue plugin for BEM parameterization",
   "main": "dist/index.js",
   "author": "vuebits (https://github.com/vuebits)",
