@@ -1,6 +1,6 @@
 import { App } from 'vue';
 import { BemOptions, BemItem } from '@/models';
-import { getClassName } from '../helpers';
+import { getClassName } from '@/helpers';
 
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {

@@ -4,6 +4,6 @@ import { install } from './plugin';
 
 export function createBem (options: BemOptions): {install: (T: App) => void} {
   return {
-    install: (app: App) => install(app, options)
+    install: (app: App): void => install(app, options)
   };
 }
