@@ -31,7 +31,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "vue-cli-service build --target lib --name vuebits-bem src",
+    "build": "vue-cli-service build --target lib --name vuebits-bem src/index.ts",
     "serve": "vue-cli-service serve src/sandbox",
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
