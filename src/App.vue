@@ -1,15 +1,17 @@
 <template>
-  <Bem />
+  <main :class="$bem({})">
+    <Post :class="$bem({e: 'post'})" />
+  </main>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Bem from './components/Bem.vue';
+import Post from './components/Post.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Bem
+    Post
   }
 });
 </script>
