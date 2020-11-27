@@ -1,5 +1,5 @@
 import { App } from 'vue';
-import { BemOptions, BemItem } from '@/models';
+import { BemOptions, BemItem } from './models';
 import { install } from './library';
 
 export function createBem (options: BemOptions): {install: (T: App) => void} {
