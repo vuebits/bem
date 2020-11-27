@@ -1,6 +1,24 @@
 <template>
   <main :class="$bem({})">
-    <Post :class="$bem({e: 'post'})" />
+    <div
+      v-for="modifier in modifiers"
+      :key="modifier.name"
+      :class="$bem({e: 'checkbox'})"
+    >
+      <input
+        v-model="modifier.value"
+        type="checkbox"
+        :name="modifier.name"
+        :class="$bem({e: 'checkbox-input'})"
+      >
+      <label
+        :for="modifier.name"
+        :class="$bem({e: 'checkbox-label'})"
+      >
+        {{ modifier.label }}
+      </label>
+    </div>
+    <Post :class="$bem({e: 'post', m: selectedModifiers})" />
   </main>
 </template>
 
@@ -12,6 +30,40 @@ export default defineComponent({
   name: 'App',
   components: {
     Post
+  },
+  data () {
+    return {
+      modifiers: [
+        {
+          name: 'highlighted',
+          value: false,
+          label: 'Highlighted'
+        },
+        {
+          name: 'bordered',
+          value: false,
+          label: 'Boredered'
+        }
+      ]
+    };
+  },
+  computed: {
+    selectedModifiers (): string[] {
+      return this.modifiers.filter(f => f.value).map(f => f.name);
+    }
   }
 });
 </script>
+
+<style lang="scss">
+.app {
+  &__post {
+    &--highlighted {
+      background-color: #ff0;
+    }
+    &--bordered {
+      border: 1px solid #ccc;
+    }
+  }
+}
+</style>
