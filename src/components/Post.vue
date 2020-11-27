@@ -6,7 +6,7 @@
     <h2 :class="$bem({e: 'subtitle'})">
       I am subtitle
     </h2>
-    <p :class="$bem({e: 'content'})">
+    <p :class="$bem({e: 'content', m: contentModifiers})">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis enim ornare libero vulputate pellentesque.
       Sed rutrum magna vel aliquet dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
       Fusce vestibulum lobortis mi. Aenean commodo et lacus non rutrum. Aliquam luctus finibus hendrerit.
@@ -21,9 +21,27 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Post'
+  name: 'Post',
+  data () {
+    return {
+      contentModifiers: {
+        light: true,
+        underlined: false
+      }
+    };
+  }
 });
 </script>
 
 <style scoped lang="scss">
+.post {
+  &__content {
+    &--light {
+      color: #555;
+    }
+    &--underlined {
+      text-decoration: underline;
+    }
+  }
+}
 </style>
