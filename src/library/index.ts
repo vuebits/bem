@@ -2,12 +2,6 @@ import { App } from 'vue';
 import { BemOptions, BemItem } from '@/models';
 import { getClassName } from './helpers';
 
-declare module '@vue/runtime-core' {
-  interface ComponentCustomProperties {
-    $bem: (T: BemItem) => string[];
-  }
-}
-
 export function install (Vue: App, { hyphenate }: BemOptions): void {
   Vue.mixin({
     name: 'BemMixin',
