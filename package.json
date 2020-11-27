@@ -1,8 +1,10 @@
 {
   "name": "@vuebits/bem",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue plugin for BEM parameterization",
-  "main": "dist/index.js",
+  "main": "./dist/js/vuebits-bem.common.js",
+  "module": "./dist/js/vuebits-bem.common.js",
+  "types": "./dist/types/index.d.ts",
   "author": "vuebits (https://github.com/vuebits)",
   "contributors": [
     "Szczepan Masny <szczepanmasny@gmail.com> (https://github.com/szczepanmasny)"
@@ -29,8 +31,9 @@
     "dist"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --target lib --name vuebits-bem src/index.ts",
+    "serve:sandbox": "vue-cli-service serve",
+    "build:sandbox": "vue-cli-service build",
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
