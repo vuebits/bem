@@ -27,7 +27,7 @@ import { defineComponent } from 'vue';
 import Post from './components/Post.vue';
 
 export default defineComponent({
-  name: 'App',
+  name: 'VApp',
   components: {
     Post
   },
@@ -56,7 +56,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-.app {
+.v-app {
   &__post {
     &--highlighted {
       background-color: #ff0;

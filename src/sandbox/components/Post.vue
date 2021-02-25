@@ -21,7 +21,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Post',
+  name: 'VPost',
   data () {
     return {
       contentModifiers: {
@@ -34,7 +34,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.post {
+.v-post {
   &__content {
     &--light {
       color: #555;

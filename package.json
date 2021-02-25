@@ -1,6 +1,6 @@
 {
   "name": "@vuebits/bem",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Vue plugin for BEM parameterization",
   "main": "./dist/vuebits-bem.common.js",
   "module": "./dist/vuebits-bem.common.js",
