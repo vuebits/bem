@@ -13,7 +13,7 @@ export function install (Vue: App, { hyphenate }: BemOptions): void {
           .replace(/[\s_]+/g, '-')
           .toLowerCase();
         const n = this.$options.name;
-        const block: string = b || hyphenate ? pascalToKebabCase(n) : n;
+        const block: string = b || (hyphenate ? pascalToKebabCase(n) : n);
         const modifiers: string[] = m ? (typeof m === 'string' ? [m] : (Array.isArray(m) ? m : Object.keys(m).filter(key => m[key]))) : [];
         const elementClass = getClassName(block, e);
         const modifiersClasses = modifiers.map(m => getClassName(block, e, m));
